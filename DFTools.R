@@ -6,3 +6,7 @@ tDF <- function( x ) {
   return(as.data.frame(x.T))
 }
 
+# from List of List to data frame 
+listoflist2df <- function( x ) {
+  return(do.call(rbind,lapply(x,data.frame)))
+}
